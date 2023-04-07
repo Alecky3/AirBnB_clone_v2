@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body,html{
+            padding: 0;
+            margin: 0;
+            background: #000;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            flex-wrap: wrap;
+        }
+        .container > div{
+            padding: 10px;
+            background-color: #333;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 14px;
+        }
+        .container > div:first-child, .container > div:nth-child(2){
+            margin-right: 5px;
+        }
+       
+        @media screen and (max-width: 500px) {
+            .container > div{
+                width: 40%;
+            }
+        }
+        @media screen  and (max-width: 768px){
+            .container > div {
+                width: 43%;
+            }
+        }
+        @media screen and (min-width: 768px){
+            .container > div {
+                width: 33%;
+            }
+        }
+        @media screen and (min-width: 320px) and (max-width: 400px){
+            .container > div {
+                width: 80%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>One</div>
+        <div>Two</div>
+        <div>Three</div>
+    </div>
+</body>
+</html>
