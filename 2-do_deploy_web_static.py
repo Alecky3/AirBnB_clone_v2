@@ -30,10 +30,3 @@ def do_deploy(file_path):
     except Exception as e:
         print(e)
         return False
-
-
-if __name__ == "__main__":
-    #env.hosts = ['web-01.alexmuthini.tech', 'web-02.alexmuthini.tech']
-    #env.user = 'ubuntu'
-    ret = do_deploy('versions/web_static_20230407191528.tgz')
-    print(ret)
