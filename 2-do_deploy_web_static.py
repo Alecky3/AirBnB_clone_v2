@@ -16,15 +16,14 @@ def do_deploy(file_path):
     try:
         filename = file_path.split('/')[-1]
         file = filename.split('.')[0]
-        #run('mkdir -p /tmp/{}'.format(file_path))
         put(file_path, '/tmp/')
         sudo('mkdir -p /data/web_static/releases/{}'.format(file))
         sudo('tar -xzf /tmp/{} -C /data/web_static/releases/{}/'
-                .format(filename, file))
+             .format(filename, file))
         run('rm -f /tmp/{}'.format(filename))
         run('rm -f /data/web_static/current')
-        run("ln -sf /data/web_static/releases/{}/web_static/ /data/web_static/current"
-                .format(file))
+        run("ln -sf /data/web_static/releases/{}/web_static/ \
+                /data/web_static/current".format(file))
 
         return True
     except Exception as e:
