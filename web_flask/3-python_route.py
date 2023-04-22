@@ -22,7 +22,7 @@ def croute(text):
     """croute view return 'c <text>'."""
     return "C " + text.replace('_', ' ')
 
-
+@app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def pythonroute(text="is cool"):
     """Python view, returns 'Python <text>'."""
