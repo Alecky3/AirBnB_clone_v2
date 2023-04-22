@@ -9,6 +9,7 @@ def home():
     """ home view that return 'Hello HBNB'."""
     return "Hello HBNB!"
 
+
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
     """ hbnb view that returns 'HBNB'."""
