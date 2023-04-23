@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-    Declaration for database storage
+    Contains Declaration for database storage
 '''
 import models
 from sqlalchemy.ext.declarative import declarative_base
