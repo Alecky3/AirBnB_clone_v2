@@ -44,3 +44,6 @@ class FileStorage:
                 self.__objects = res
         except (OSError, json.JSONDecodeError):
             return
+    def close(self):
+        """deserializes the JSON file to objects."""
+        self.reload()
